@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #2F303A;
+}
+
+body .full-container {
+  position: relative;
+}
+
+body .full-container .circle {
+  position: absolute;
+  width: 35vw;
+  height: 70vh;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+.circle::before{
+  content: '';
+  transform: translateX(-20%);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: rgb(188, 58, 128, .1);
+}
+
+body .wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+body header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+body header .logo, body header .other-links {
+  display: flex;
+  padding: 50px 0;
+  cursor: pointer;
+}
+
+body header .logo {
+  align-items: center;
+}
+
+body header .logo span {
+  color: white;
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+body header .other-links {
+  justify-content: flex-end;
+}
+
+body header .other-links li {
+  display: inline-block;
+  padding: 20px 10px 0 10px;
+  font-size: 18px;
+}
+
+body header .other-links a {
+  color: white;
+}
+
+body header .other-links a:hover {
+  color: lightgrey;
+  font-weight: lighter;
+}
+
+body section {
+  display: flex;
+  justify-content: space-between;
+}
+
+body section form {
+  height: 65vh;
+  width: 38vw;
+  padding: 30px 60px 20px 60px;
+  border-radius: 25px;
+  background-color: #202027;
+}
+
+body section form .input-group {
+  margin-bottom: 20px;
+}
+
+body section form .input-group label {
+  display: block;
+  color: white;
+  font-weight: 1000;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+body section form .input-group input {
+  min-width: 100%;
+  background: none;
+  outline: none;
+  border: 1px solid #2E3852;
+  border-radius: 5px;
+  padding: 5px;
+  height: 12%;
+}
+
+body section form .input-group input:focus {
+  border: 1px solid #1762A7;
+}
+
+body section form button {
+  min-width: 100%;
+  background-color: #1762A7;
+  border: 1px solid #1762A7;
+  border-radius: 5px;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+body section h1 {
+  align-self: center;
+  color: white;
+  font-size: 65px;
+  font-weight: 1000;
+}
+
+body section h1 span {
+  color: #BC3A80;
+}
+
+body footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #202027;
+  margin-top: 3px;
+  height: 67px;
+}
+
+body footer ul:first-of-type {
+  padding-left: 10%;
+}
+
+body footer ul:last-of-type {
+  padding-right: 10%;
+}
+
+body footer ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+body footer ul li {
+  padding-right: 20px;
+}
+
+body footer ul li a {
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+body footer ul li a:hover {
+  color: lightgrey;
+}
+
+body footer ul li img {
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  main section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main section form {
+    width: 80vw;
+    align-self: center;
+  }
+}
